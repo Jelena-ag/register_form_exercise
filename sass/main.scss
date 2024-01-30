@@ -7,33 +7,106 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+	height: 100vh;
+	font-family: 'Poppins', sans-serif;
 	background: linear-gradient(to top, #fbc2eb 0%, #a18cd1 100%);
+	color: white;
 }
 
 .register__card {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
+	margin-top: 180px;
+	margin-bottom: 100px;
+	background-color: black;
+	border-radius: 10px;
+	box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+	overflow: hidden;
+
+	&--img {
+		height: 400px;
+		img {
+			width: 100%;
+			height: 100%;
+			background-position: center;
+			object-fit: cover;
+		}
+	}
+	&--form {
+		display: flex;
+		flex-direction: column;
+		row-gap: 40px;
+		padding: 40px 30px;
+
+		.contact__forms {
+			display: flex;
+			flex-direction: column;
+			row-gap: 30px;
+		}
+		.contact__form {
+			color: #ccc;
+			&-input {
+				width: 100%;
+				padding: 5px 0;
+				border: none;
+				border-bottom: 1px solid rgb(204, 204, 204, 0.3);
+				font-family: inherit;
+				font-size: 16px;
+				color: rgb(204, 204, 204);
+				outline: none;
+				background: none;
+				transition: 0.3s;
+
+				&::placeholder {
+					color: rgb(204, 204, 204);
+				}
+
+				&:focus {
+					border: none;
+					box-shadow: 0 4px 6px -3px rgb(232, 78, 237);
+				}
+			}
+			
+			.icon-tabler {
+				cursor: pointer;
+			}
+	
+			&-btn {
+				width: fit-content;
+				padding: 10px 35px;
+				border-radius: 20px;
+				font-size: 18px;
+				color: white;
+				letter-spacing: 1px;
+				background-color: rgb(87, 184, 70);
+				border: none;
+				cursor: pointer;
+			}
+		}
+	}
 }
 
+@media (min-width: 768px) {
+	.register__card {
+		max-width: 800px;
+		min-height: 590px;
+		flex-direction: row;
+		margin: 180px auto;
+		border-radius: 10px;
 
+		&--img {
+			height: 590px;
+		}
+		&--form {
+			width: 50%;
+			padding-left: 60px;
+			padding-right: 60px;
+		}
+		.contact__form {
 
-
-// img {
-// 	height: auto;
-// }
-
-// input,
-// button,
-// textarea,
-// select {
-// 	font-family: inherit;
-// }
-
-// button {
-// 	cursor: pointer;
-// }
-
-// textarea {
-// 	resize: vertical;
-// }
+			&-btn {
+				margin-top: 20px;
+			}
+		}
+	}
+}
