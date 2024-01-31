@@ -11,46 +11,28 @@
 
 <body>
     <div class="register__card">
-        <div class="register__card--img">
+        <div class="register__card-img">
             <img src="./img/girl.jpeg" alt="girl in the pink smoke">
         </div>
-        <div class="register__card--form">
-            <h2 class="register__card--info">Registration info</h2>
+        <div class="register__card-form">
+            <h2 class="register__card-info">Registration info</h2>
             <form class="contact__forms">
                 <div class="contact__form">
                     <input class="contact__form-input" type="text" placeholder="Name" id="name">
                 </div>
                 <div class="contact__form">
-                    <input class="contact__form-input" type="text" placeholder="Birthdate" id="birthdate">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-week"
-                        width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" />
-                        <path d="M16 3v4" />
-                        <path d="M8 3v4" />
-                        <path d="M4 11h16" />
-                        <path d="M8 14v4" />
-                        <path d="M12 14v4" />
-                        <path d="M16 14v4" />
-                    </svg>
+                    <input class="contact__form-input contact__form-icon contact__form--calendar" type="text"
+                        placeholder="Birthdate" id="birthdate">
                 </div>
                 <div class="contact__form">
-                    <input class="contact__form-input" type="search" name="query" placeholder="Gender" id="gender">
-                    <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="20" height="20"
-                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M6 9l6 6l6 -6" />
-                    </svg>
-                        <select class="contact__form-select" name="gender" id="gender">
-                            <option value="gender" disabled="disabled" selected="selected">Gender</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
+                    <input class="contact__form-input contact__form-icon contact__form--chevron" type="search"
+                        name="query" placeholder="Gender" id="gender">
+                    <select class="contact__form-select" name="gender" id="gender" size="4">
+                        <option value="gender" disabled="disabled" selected="selected">Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
                 </div>
                 <div class="contact__form">
                     <input class="contact__form-input" type="email" name="user_email" placeholder="Email" id="email">
@@ -62,6 +44,7 @@
             </form>
         </div>
     </div>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
