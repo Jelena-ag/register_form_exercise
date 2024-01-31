@@ -76,12 +76,10 @@ body {
 
 			&--calendar {
 				background-image: url(/img/calendar-week.svg);
-				// background: url(/img/calendar-week.svg) right no-repeat;
 			}
 
 			&--chevron {
 				background-image: url(/img/chevron-down.svg);
-				// background: url(/img/chevron-down.svg) right no-repeat;
 			}
 
 			&-select {
@@ -100,10 +98,6 @@ body {
 			.show {
 				display: block;
 			}
-
-			// .icon-rotate {
-			// 	rotate: 90deg;
-			// } icon dać do osobnego div/span... żeby dodać klasa rotate
 
 			&-btn {
 				width: fit-content;
