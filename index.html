@@ -18,15 +18,38 @@
             <h2 class="register__card-info">Registration info</h2>
             <form class="contact__forms">
                 <div class="contact__form">
-                    <input class="contact__form-input" type="text" placeholder="Name" id="name">
+                    <input class="contact__form-input" type="text" id="name">
+                    <label class="contact__form-label" for="name" id="name">Name</label>
                 </div>
                 <div class="contact__form">
-                    <input class="contact__form-input contact__form-icon contact__form--calendar" type="text"
-                        placeholder="Birthdate" id="birthdate">
+                    <input class="contact__form-input" type="text" id="birthdate">
+                    <label class="contact__form-label" for="text" id="birthdate">Birthdate</label>
+                    <span class="contact__form-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-week"
+                            width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" />
+                            <path d="M16 3v4" />
+                            <path d="M8 3v4" />
+                            <path d="M4 11h16" />
+                            <path d="M8 14v4" />
+                            <path d="M12 14v4" />
+                            <path d="M16 14v4" />
+                        </svg>
+                    </span>
                 </div>
                 <div class="contact__form">
-                    <input class="contact__form-input contact__form-icon contact__form--chevron" type="search"
-                        name="query" placeholder="Gender" id="gender">
+                    <input class="contact__form-input contact__form-input--chevron" type="search" name="query" id="gender">
+                    <label class="contact__form-label" for="text" id="gender">Gender</label>
+                    <span class="contact__form-icon contact__form--chevron">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down"
+                            width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M6 9l6 6l6 -6" />
+                        </svg>
+                    </span>
                     <select class="contact__form-select" name="gender" id="gender" size="4">
                         <option value="gender" disabled="disabled" selected="selected">Gender</option>
                         <option value="male">Male</option>
@@ -35,10 +58,12 @@
                     </select>
                 </div>
                 <div class="contact__form">
-                    <input class="contact__form-input" type="email" name="user_email" placeholder="Email" id="email">
+                    <input class="contact__form-input" type="email" name="user_email" id="email">
+                    <label class="contact__form-label" for="text" id="email">Email</label>
                 </div>
                 <div class="contact__form">
-                    <input class="contact__form-input" type="tel" name="phone_number" placeholder="Phone" id="phone">
+                    <input class="contact__form-input" type="tel" name="phone_number" id="phone">
+                    <label class="contact__form-label" for="number" id="phone">Phone</label>
                 </div>
                 <button type="submit" class="contact__form-btn">Submit</button>
             </form>

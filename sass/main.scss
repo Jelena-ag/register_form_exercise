@@ -1,3 +1,5 @@
+@use './utils/variables';
+
 *,
 *::after,
 *::before {
@@ -42,79 +44,83 @@ body {
 			display: flex;
 			flex-direction: column;
 			row-gap: 30px;
-		}
-		.contact__form {
-			color: #ccc;
-			&-input {
-				width: 100%;
-				padding: 5px 0;
-				border: none;
-				border-bottom: 1px solid rgb(204, 204, 204, 0.3);
-				font-family: inherit;
-				font-size: 16px;
-				color: rgb(204, 204, 204);
-				outline: none;
-				background: none;
-				transition: 0.3s;
 
-				&::placeholder {
-					color: rgb(204, 204, 204);
-				}
-
-				&:focus {
+			.contact__form {
+				position: relative;
+				color: variables.$maincolor;
+				&-input {
+					width: 100%;
+					padding: 5px 0;
 					border: none;
-					box-shadow: 0 4px 6px -3px rgb(232, 78, 237);
+					border-bottom: 1px solid rgb(204, 204, 204, 0.3);
+					font-family: inherit;
+					font-size: 16px;
+					color: rgb(204, 204, 204);
+					outline: none;
+					background: none;
+					transition: 0.3s;
+
+					&:focus {
+						border: none;
+						box-shadow: 0 4px 6px -3px rgb(232, 78, 237);
+					}
+					&:focus ~ label {
+						transform: translateY(-90%);
+						color: rgb(204, 204, 204, 0.7);
+					}
 				}
-			}
 
-			&-icon {
-				filter: brightness(0) invert(1);
-				cursor: pointer;
-				background-repeat: no-repeat;
-				background-position: right;
-			}
-
-			&--calendar {
-				background-image: url(/img/calendar-week.svg);
-				// background: url(/img/calendar-week.svg) right no-repeat;
-			}
-
-			&--chevron {
-				background-image: url(/img/chevron-down.svg);
-				// background: url(/img/chevron-down.svg) right no-repeat;
-			}
-
-			&-select {
-				display: none;
-				position: absolute;
-				width: calc(100% - 60px);
-				padding-top: 4px;
-				font-size: 16px;
-				color: black;
-				background-color: #ccc;
-				option {
-					padding: 2.5px 3px;
+				&-label {
+					position: absolute;
+					left: 0;
+					top: 5px;
+					color: variables.$maincolor;
+					transition: transform 0.3s;
 				}
-			}
 
-			.show {
-				display: block;
-			}
+				&-icon {
+					position: absolute;
+					right: 0;
+					top: 5px;
+					cursor: pointer;
+					transition: rotate 0.3s;
+				}
 
-			// .icon-rotate {
-			// 	rotate: 90deg;
-			// } icon dać do osobnego div/span... żeby dodać klasa rotate
+				.icon-rotate {
+					rotate: 180deg;
+					transform: translateY(50%);
+				}
 
-			&-btn {
-				width: fit-content;
-				padding: 10px 35px;
-				border-radius: 20px;
-				font-size: 18px;
-				color: white;
-				letter-spacing: 1px;
-				background-color: rgb(87, 184, 70);
-				border: none;
-				cursor: pointer;
+				&-select {
+					display: none;
+					position: absolute;
+					width: calc(100% - 60px);
+					padding-top: 4px;
+					font-size: 16px;
+					color: black;
+					background-color: #ccc;
+					z-index: 1;
+
+					option {
+						padding: 2.5px 3px;
+					}
+				}
+
+				.show {
+					display: block;
+				}
+
+				&-btn {
+					width: fit-content;
+					padding: 10px 35px;
+					border-radius: 20px;
+					font-size: 18px;
+					color: white;
+					letter-spacing: 1px;
+					background-color: rgb(87, 184, 70);
+					border: none;
+					cursor: pointer;
+				}
 			}
 		}
 	}
