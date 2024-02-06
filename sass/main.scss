@@ -1,3 +1,12 @@
+/* do zrobienia: 
+1. przy naciskaniu na wybór gender -> wybrana opcjia zostawała w inpucie
+2. icon - ustawić ładne obracanie
+3. przy naciskaniu na input -> label podnosi się -> po wprowadzeniu dannych ma zostać podniesiony, teraz spada na danne wpisane w inpucie. 
+4. po naciśnieciu na inne pole/body -> ma znikać wybór gender
+5. dołączyć kalendarz rozwijany z wyborem dat
+6. jeżeli pole nie zostało wypełnione, to można go podkreslic na np czerwony i wyswietlić informacjie, że jest obowiązkowe
+*/
+
 @use './utils/variables';
 
 *,
@@ -94,15 +103,15 @@ body {
 				&-select {
 					display: none;
 					position: absolute;
-					width: calc(100% - 60px);
+					width: 100%;
 					padding-top: 4px;
 					font-size: 16px;
 					color: black;
-					background-color: #ccc;
+					background-color: white;
 					z-index: 1;
 
 					option {
-						padding: 2.5px 3px;
+						padding: 7px 5px;
 					}
 				}
 

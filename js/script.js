@@ -4,6 +4,10 @@ const inputChervon = document.querySelector('.contact__form-input--chevron');
 
 btnChevron.addEventListener('click', () => {
 	select.classList.toggle('show');
-	// inputChervon.classList.toggle('show');
+	btnChevron.classList.toggle('icon-rotate');
+});
+
+inputChervon.addEventListener('click', () => {
+	select.classList.toggle('show');
 	btnChevron.classList.toggle('icon-rotate');
 });
